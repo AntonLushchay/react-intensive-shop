@@ -1,14 +1,16 @@
 import './App.css';
-import { Header } from './Header';
-import { Product } from './product';
-import { BestSellers } from './BestSellers';
 import { Route, Routes } from 'react-router-dom';
-import { CartProvider } from './CartContext';
-import { Cart } from './Cart';
+import { AppProvider } from './AppContext';
+
+// Views
+import { Header } from './views/Header';
+import { BestSellers } from './views/BestSellers';
+import { Product } from './views/Product';
+import { Cart } from './views/Cart';
 
 function App() {
     return (
-        <CartProvider>
+        <AppProvider>
             <div className='appContainer'>
                 <Header />
                 <Routes>
@@ -17,7 +19,7 @@ function App() {
                     <Route path='/cart' element={<Cart />} />
                 </Routes>
             </div>
-        </CartProvider>
+        </AppProvider>
     );
 }
 
