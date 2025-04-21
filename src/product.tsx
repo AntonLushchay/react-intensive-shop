@@ -1,18 +1,20 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router';
-import { Review } from './Review.tsx';
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { Review } from './Review';
+import { useCart } from './CartContext';
+import { ProductType } from './BestSellers';
 
 import rating from './assets/img/rating.svg';
 import cartWhite from './assets/img/cartWhite.svg';
 import arrowBack from './assets/img/arrowBack.svg';
 
-import type { ProductType } from './BestSellers.tsx';
-
 export const Product = () => {
     const [product, setProducts] = useState<ProductType | null>(null);
+    const { toggleCartItem, isProductInCart } = useCart();
 
     const { id } = useParams();
+    const productId = id ? parseInt(id) : 0;
 
     useEffect(() => {
         axios
@@ -23,17 +25,25 @@ export const Product = () => {
             .catch((error) => {
                 console.error('Error fetching data:', error);
             });
-    }, []);
+    }, [id]);
 
     if (!product) {
         return <div>Loading...</div>;
     }
 
-    function addToCart() {
+    const isInCart = isProductInCart(productId);
+
+    function handleToggleCart() {
         const button = document.querySelector('.addToCart');
         if (button) {
-            button.classList.add('clicked');
-            alert('Added to cart');
+            if (isInCart) {
+                // Если товар уже в корзине, удаляем его
+                button.classList.remove('clicked');
+            } else {
+                // Если товара нет в корзине, добавляем его
+                button.classList.add('clicked');
+            }
+            toggleCartItem(productId);
         }
     }
 
@@ -60,9 +70,9 @@ export const Product = () => {
                         <p>{product.category}</p>
                     </div>
                     <p className='description'>{product.description}</p>
-                    <button onClick={addToCart} className='addToCart'>
+                    <button onClick={handleToggleCart} className={`addToCart ${isInCart ? 'clicked' : ''}`}>
                         <img src={cartWhite} alt='' />
-                        Add to cart
+                        {isInCart ? 'Remove from cart' : 'Add to cart'}
                     </button>
                 </div>
             </div>
