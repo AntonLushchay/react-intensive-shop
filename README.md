@@ -1,54 +1,88 @@
-# React + TypeScript + Vite
+# React Intensive Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project Status](https://img.shields.io/badge/Status-Completed-success)
+![Project Type](https://img.shields.io/badge/Type-Educational-orange)
+![Deploy](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue)
+![React](https://img.shields.io/badge/React-19-blue)
+![Vite](https://img.shields.io/badge/Build%20Tool-Vite-brightgreen)
 
-Currently, two official plugins are available:
+Учебный проект интернет-магазина, разработанный в рамках интенсива по React от **IT-Incubator**. Приложение позволяет просматривать товары, изучать их детальное описание и управлять корзиной покупок.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📺 Демо
 
-## Expanding the ESLint configuration
+Посмотреть проект можно здесь: **https://antonlushchay.github.io/react-intensive-shop/**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📋 О проекте
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Данный репозиторий создан для отработки базовых навыков работы с библиотекой React. Основной упор сделан на понимание компонентного подхода, маршрутизации и управления состоянием.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+В проекте реализована интересная архитектурная особенность — разделение логики на **Models**, **Views** и **Controllers** (MVC), что позволяет отделить бизнес-логику от UI-компонентов.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**Ключевые особенности обучения:**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+-   Основы React (Hooks: `useState`, `useEffect`).
+-   Маршрутизация с `react-router-dom`.
+-   Взаимодействие с API (запросы через `axios`).
+-   Реализация корзины товаров с сохранением состояния.
+-   Деплой приложения на GitHub Pages.
+
+## 🛠 Технологический стек
+
+-   **React 19** (Библиотека пользовательских интерфейсов)
+-   **TypeScript** (Статическая типизация)
+-   **Vite** (Быстрый сборщик проекта)
+-   **React Router DOM** (Навигация в SPA)
+-   **Axios** (HTTP-клиент)
+-   **CSS3** (Стилизация компонентов)
+-   **ESLint** (Линтинг кода)
+
+## ✨ Функциональность
+
+-   **Каталог товаров:** Просмотр списка популярных товаров ("Best Sellers").
+-   **Страница товара:** Детальная информация о продукте, включая описание, цену и рейтинг.
+-   **Корзина:**
+    -   Добавление товаров в корзину.
+    -   Изменение количества товаров.
+    -   Удаление товаров.
+    -   Подсчет общей стоимости.
+-   **Отзывы:** Просмотр отзывов к товарам.
+-   **Адаптивность:** Корректное отображение на различных устройствах.
+
+## 🚀 Установка и запуск
+
+Чтобы запустить проект локально на своем компьютере:
+
+1.  **Клонируйте репозиторий:**
+
+    ```bash
+    git clone https://github.com/AntonLushchay/react-intensive-shop.git
+    ```
+
+2.  **Перейдите в папку проекта:**
+
+    ```bash
+    cd react-intensive-shop
+    ```
+
+3.  **Установите зависимости:**
+
+    ```bash
+    npm install
+    ```
+
+4.  **Запустите проект в режиме разработки:**
+
+    ```bash
+    npm run dev
+    ```
+
+    Проект будет доступен по ссылке, указанной в терминале (обычно `http://localhost:5173/`).
+
+5.  **Сборка проекта (Production):**
+    ```bash
+    npm run build
+    ```
+
+---
+
+_Автор: [AntonLushchay](https://github.com/AntonLushchay)_
