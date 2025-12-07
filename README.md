@@ -1,10 +1,20 @@
 # React Intensive Shop
 
-![Project Status](https://img.shields.io/badge/Status-Completed-success)
-![Project Type](https://img.shields.io/badge/Type-Educational-orange)
-![Deploy](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue)
-![React](https://img.shields.io/badge/React-19-blue)
-![Vite](https://img.shields.io/badge/Build%20Tool-Vite-brightgreen)
+![Status](https://img.shields.io/badge/status-Completed-darkgreen)
+![Type](https://img.shields.io/badge/type-Educational-orange)
+![Deploy](https://img.shields.io/badge/deploy-GitHub%20Pages-blue)
+![Audience](https://img.shields.io/badge/audience-Portfolio-purple)
+
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![CSS](https://img.shields.io/badge/CSS-3-blue?logo=css3)
+![TypeScript](https://img.shields.io/badge/TypeScript-444444?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-444444?logo=vite)
+![ReactRouter](https://img.shields.io/badge/ReactRouter-444444?logo=reactrouter)
+![Axios](https://img.shields.io/badge/Axios-444444?logo=axios)
+
+![ESLint](https://img.shields.io/badge/ESLint-444444?logo=eslint)
+![Prettier](https://img.shields.io/badge/Prettier-444444?logo=prettier)
+![Stylelint](https://img.shields.io/badge/Stylelint-444444?logo=stylelint)
 
 Учебный проект интернет-магазина, разработанный в рамках интенсива по React от **IT-Incubator**. Приложение позволяет просматривать товары, изучать их детальное описание и управлять корзиной покупок.
 
@@ -28,13 +38,13 @@
 
 ## 🛠 Технологический стек
 
--   **React 19** (Библиотека пользовательских интерфейсов)
--   **TypeScript** (Статическая типизация)
--   **Vite** (Быстрый сборщик проекта)
--   **React Router DOM** (Навигация в SPA)
--   **Axios** (HTTP-клиент)
--   **CSS3** (Стилизация компонентов)
--   **ESLint** (Линтинг кода)
+-   **React 19** - Библиотека пользовательских интерфейсов
+-   **TypeScript** - Статическая типизация
+-   **Vite** - Быстрый сборщик проекта
+-   **React Router DOM** - Навигация в SPA
+-   **Axios** - HTTP-клиент
+-   **CSS3** - Стилизация компонентов
+-   **ESLint | Stylelint | Prettier** - Линтинг | форматинг
 
 ## ✨ Функциональность
 
